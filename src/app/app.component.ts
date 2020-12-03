@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'packt-ng-pattern';
+
+  constructor(private router: Router) {}
+
+  routeToAbout() {
+    // this.router.navigate(['/about'], id);
+    // this.router.navigate(['/about'],
+    // { queryParams: {name: 'rin'}});
+    this.router.navigate(['/about']);
+  }
 }
